@@ -13,9 +13,9 @@ spec:
   selector:
     matchLabels:
       app: {{ template "fullname" . }}
-  {{- if eq .Values.hpa "false" }}
+{{- if eq .Values.hpa "false" }}
   replicas: 2
-  {{- end }}
+{{- end }}
   template:
     metadata:
       labels:
